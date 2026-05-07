@@ -76,6 +76,8 @@ body{
   font-family:'JetBrains Mono', monospace;
   padding:20px;
   line-height:1.7;
+
+  user-select:none;
 }
 
 .container{
