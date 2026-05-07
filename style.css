@@ -210,3 +210,13 @@ li{
 
   font-family:'JetBrains Mono', monospace;
 }
+
+.card a{
+  color:#cccccc;
+  text-decoration:none;
+  transition:0.2s ease;
+}
+
+.card a:hover{
+  color:#8b5cf6;
+}
