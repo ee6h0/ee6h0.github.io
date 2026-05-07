@@ -76,3 +76,65 @@ li{
   color:#999999;
   margin-bottom:15px;
 }
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(15,15,15,0.92);
+
+  border:1px solid #2a2a2a;
+
+  border-radius:16px;
+
+  padding:15px 20px;
+
+  margin-bottom:30px;
+
+  backdrop-filter:blur(10px);
+}
+
+.navbar-content{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+}
+
+.logo{
+  font-size:18px;
+  font-weight:700;
+}
+
+.nav-links{
+  display:flex;
+  gap:15px;
+}
+
+.nav-links a{
+  color:#cccccc;
+  text-decoration:none;
+  transition:0.2s ease;
+}
+
+.nav-links a:hover{
+  color:#8b5cf6;
+}
+
+.toggle-btn{
+  background:#181818;
+
+  border:1px solid #2a2a2a;
+
+  color:#ffffff;
+
+  padding:8px 14px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  font-family:'JetBrains Mono', monospace;
+}
