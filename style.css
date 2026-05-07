@@ -220,3 +220,17 @@ li{
 .card a:hover{
   color:#8b5cf6;
 }
+
+.card a{
+  color:#d1d1d1;
+  text-decoration:none;
+  transition:0.2s ease;
+}
+
+.card a:hover{
+  color:#8b5cf6;
+}
+
+.card li{
+  margin-bottom:14px;
+}
