@@ -7,5 +7,4 @@ Organized Instagram archive, watchlists, blogs and resources.
 Built using:
 - HTML
 - CSS
-- JavaScript
 - GitHub Pages
