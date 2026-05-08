@@ -21,97 +21,83 @@
 
 body{
   background:#050505;
-  color:#ffffff;
-  font-family:'JetBrains Mono', monospace;
-  padding:28px 20px 60px;
-}
-
-.title-box{
-  background:#111111;
-  border:1px solid #222;
-  border-radius:28px;
-  padding:38px 30px;
-  margin-bottom:40px;
-}
-
-.title-box h1{
-  font-size:52px;
-  margin-bottom:18px;
-}
-
-.title-box p{
-  color:#8d8d8d;
-  line-height:1.8;
-  font-size:15px;
-}
-
-.creator-stack{
-  display:flex;
-  flex-direction:column;
-  gap:22px;
-}
-
-.creator{
-  position:relative;
-  overflow:hidden;
-  border-radius:24px;
-  padding:26px;
-  background:linear-gradient(
-    135deg,
-    #111111,
-    #171717
-  );
-  border:1px solid #242424;
-  transition:0.25s;
-}
-
-.creator:hover{
-  transform:translateY(-4px);
-  border-color:#8b5cf6;
-}
-
-.creator::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:5px;
-  height:100%;
-  background:#8b5cf6;
-}
-
-.creator a{
-  text-decoration:none;
   color:white;
+  font-family:'JetBrains Mono', monospace;
+  padding:28px;
 }
 
-.creator-name{
-  font-size:24px;
+.header{
+  margin-bottom:60px;
+}
+
+.header h1{
+  font-size:58px;
+  margin-bottom:12px;
+}
+
+.header p{
+  color:#777;
+  line-height:1.7;
+  max-width:500px;
+}
+
+.creator-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.creator-grid a{
+  text-decoration:none;
+  color:#d1d1d1;
+
+  border:1px solid #1d1d1d;
+  background:#0b0b0b;
+
+  padding:38px 20px;
+
+  border-radius:22px;
+
+  font-size:18px;
   font-weight:700;
-  margin-bottom:10px;
+
+  transition:0.2s ease;
 }
 
-.creator-id{
-  color:#9f9f9f;
-  font-size:14px;
+.creator-grid a:hover{
+  color:#8b5cf6;
+  border-color:#8b5cf6;
+  transform:translateY(-3px);
 }
 
-.creator-tag{
-  margin-top:18px;
-  display:inline-block;
-  padding:7px 14px;
-  border-radius:999px;
-  background:#1d1333;
-  color:#b48cff;
-  font-size:12px;
+.creator-grid a:active{
+  transform:scale(0.98);
 }
 
 .back{
   display:inline-block;
-  margin-top:45px;
-  color:#8b5cf6;
+  margin-top:50px;
+
   text-decoration:none;
+  color:#666;
+
   font-size:14px;
+}
+
+.back:hover{
+  color:#8b5cf6;
+}
+
+@media(max-width:700px){
+
+  .creator-grid{
+    grid-template-columns:1fr;
+  }
+
+  .header h1{
+    font-size:44px;
+  }
+
 }
 
 </style>
@@ -119,106 +105,41 @@ body{
 
 <body>
 
-<div class="title-box">
+<div class="header">
+
   <h1>Creators</h1>
 
   <p>
-    archived creator accounts, edits, ideas,
-    gaming clips, and visual inspiration.
+    saved accounts / archive references
   </p>
+
 </div>
 
-<div class="creator-stack">
+<div class="creator-grid">
 
-  <div class="creator">
-    <a href="https://www.instagram.com/dalitkrantikari/" target="_blank">
+  <a href="https://www.instagram.com/dalitkrantikari/" target="_blank">
+    @dalitkrantikari
+  </a>
 
-      <div class="creator-name">
-        Dalit Krantikari
-      </div>
+  <a href="https://www.instagram.com/b2und_/" target="_blank">
+    @b2und_
+  </a>
 
-      <div class="creator-id">
-        @dalitkrantikari
-      </div>
+  <a href="https://www.instagram.com/deltaforce.ftw/" target="_blank">
+    @deltaforce.ftw
+  </a>
 
-      <div class="creator-tag">
-        political
-      </div>
+  <a href="https://www.instagram.com/joroedits/" target="_blank">
+    @joroedits
+  </a>
 
-    </a>
-  </div>
+  <a href="https://www.instagram.com/kalludaket/" target="_blank">
+    @kalludaket
+  </a>
 
-  <div class="creator">
-    <a href="https://www.instagram.com/b2und_/" target="_blank">
-
-      <div class="creator-name">
-        b2und
-      </div>
-
-      <div class="creator-id">
-        @b2und_
-      </div>
-
-      <div class="creator-tag">
-        edits
-      </div>
-
-    </a>
-  </div>
-
-  <div class="creator">
-    <a href="https://www.instagram.com/deltaforce.ftw/" target="_blank">
-
-      <div class="creator-name">
-        Delta Force
-      </div>
-
-      <div class="creator-id">
-        @deltaforce.ftw
-      </div>
-
-      <div class="creator-tag">
-        gaming
-      </div>
-
-    </a>
-  </div>
-
-  <div class="creator">
-    <a href="https://www.instagram.com/joroedits/" target="_blank">
-
-      <div class="creator-name">
-        Joro Edits
-      </div>
-
-      <div class="creator-id">
-        @joroedits
-      </div>
-
-      <div class="creator-tag">
-        anime edits
-      </div>
-
-    </a>
-  </div>
-
-  <div class="creator">
-    <a href="https://www.instagram.com/kalludaket/" target="_blank">
-
-      <div class="creator-name">
-        Kallu Da Ket
-      </div>
-
-      <div class="creator-id">
-        @kalludaket
-      </div>
-
-      <div class="creator-tag">
-        meme / misc
-      </div>
-
-    </a>
-  </div>
+  <a href="#">
+    @unknown
+  </a>
 
 </div>
 
