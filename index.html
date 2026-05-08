@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
 
   <title>ee6h0</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
 
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
 
-  <link rel="stylesheet" href="style.css?v=2">
+  <link
+  href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+  rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="style.css?v=2">
 
 </head>
 
-<body>
-
 <body class="show-both">
-  
+
 <div class="grid-bg"></div>
 
 <div class="dots"></div>
-  
+
 <nav class="navbar">
 
   <div class="nav-links">
@@ -35,9 +43,11 @@
     <a href="https://github.com/ee6h0/ee6h0.github.io/">
       Repo
     </a>
-    <a href="#" onclick="switchTheme()">
-  Theme
- </a>
+
+    <a href="#"
+    onclick="switchTheme()">
+      Theme
+    </a>
 
   </div>
 
@@ -76,20 +86,19 @@
       </div>
 
       <img
-        src="assets/images/octopus.png"
-        alt="octopus"
-        class="profile-pic"
-        draggable="false"
-      >
+      src="assets/images/octopus.png"
+      alt="octopus"
+      class="profile-pic"
+      draggable="false">
 
     </div>
 
   </div>
 
-</div>
   <div class="section">
 
-    <h2 id="instagram" class="section-title">
+    <h2 id="instagram"
+    class="section-title">
       Instagram
     </h2>
 
@@ -98,26 +107,32 @@
       <ul>
 
         <li>
+
           <a href="instagram/users">
             Users
           </a>
+
         </li>
 
         <li>
+
           <a href="instagram/creators">
             Creators
           </a>
+
         </li>
 
       </ul>
 
     </div>
 
-
+  </div>
 
 </div>
 
-  <script>
+<script>
+
+/* LOAD SAVED THEME */
 
 const savedTheme =
 localStorage.getItem("theme");
@@ -126,6 +141,8 @@ if(savedTheme){
 
   document.body.classList.add(savedTheme);
 }
+
+/* THEME SWITCHER */
 
 let theme = 0;
 
@@ -160,18 +177,22 @@ function switchTheme(){
   );
 }
 
-document.addEventListener("contextmenu", e => {
+/* DISABLE IMAGE MENU */
 
-  if(e.target.tagName === "IMG"){
+document.addEventListener(
+  "contextmenu",
+  e => {
 
-    e.preventDefault();
+    if(
+      e.target.tagName === "IMG"
+    ){
 
+      e.preventDefault();
+    }
   }
+);
 
-});
-
-  </script>
-
+</script>
 
 </body>
 </html>
