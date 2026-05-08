@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,33 +24,32 @@
 body{
 
   background:#050505;
-  color:white;
+  color:#d1d1d1;
 
   font-family:'JetBrains Mono', monospace;
 
-  padding:28px 18px;
+  padding:40px 28px;
+}
+
+/* FORCE DESKTOP FEEL */
+
+.page{
+  min-width:1200px;
 }
 
 /* TITLE */
 
-.header{
+h1{
 
-  display:flex;
-  align-items:center;
-  gap:12px;
+  font-size:52px;
+  font-weight:700;
 
-  margin-bottom:40px;
+  color:white;
+
+  margin:0;
 }
 
-.header h1{
-
-  font-size:22px;
-  font-weight:500;
-
-  color:#d4d4d4;
-
-  white-space:nowrap;
-}
+/* LINE */
 
 .line{
 
@@ -56,130 +57,223 @@ body{
   height:1px;
 
   background:#2a2a2a;
+
+  margin-top:18px;
+  margin-bottom:34px;
 }
 
-/* GRID */
+/* HOME BUTTON */
 
-.creator-grid{
+.home-btn{
 
-  display:grid;
+  display:inline-block;
 
-  grid-template-columns:
-  repeat(4,1fr);
-
-  gap:26px 12px;
-
-  text-align:center;
-}
-
-/* LINKS */
-
-.creator-grid a{
+  margin-bottom:40px;
 
   text-decoration:none;
 
-  color:#6d6d6d;
+  color:#666;
 
   font-size:13px;
 
-  transition:0.2s ease;
+  transition:0.2s;
 }
 
-.creator-grid a:hover{
+.home-btn:hover{
 
   color:#8b5cf6;
 }
 
-/* MOBILE */
+/* SORT */
 
-@media(max-width:700px){
+.sort-buttons{
 
-  .creator-grid{
+  display:flex;
+  gap:14px;
 
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:24px 8px;
-  }
-
-  .creator-grid a{
-
-    font-size:11px;
-  }
+  margin-bottom:44px;
 }
 
-/* BACK */
+.sort-buttons button{
 
-.back{
+  background:none;
 
-  display:inline-block;
+  border:1px solid #2d2d2d;
 
-  margin-top:70px;
+  color:#8b8b8b;
+
+  padding:10px 18px;
+
+  border-radius:10px;
+
+  font-family:'JetBrains Mono', monospace;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.sort-buttons button:hover{
+
+  color:white;
+
+  border-color:#666;
+}
+
+/* GRID */
+
+.creators-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(4, 1fr);
+
+  gap:34px 80px;
+}
+
+/* USERNAMES */
+
+.creator{
 
   text-decoration:none;
 
-  color:#555;
+  color:#7c7c7c;
 
-  font-size:12px;
+  font-size:15px;
+
+  transition:0.2s;
 }
 
-.back:hover{
+.creator:hover{
 
   color:#8b5cf6;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="header">
+<div class="page">
 
-  <h1>Creators</h1>
+<h1>Creators</h1>
 
-  <div class="line"></div>
+<div class="line"></div>
 
-</div>
-
-<div class="creator-grid">
-
-  <a href="https://www.instagram.com/dalitkrantikari/" target="_blank">
-    dalitkrantikari
-  </a>
-
-  <a href="https://www.instagram.com/b2und_/" target="_blank">
-    b2und_
-  </a>
-
-  <a href="https://www.instagram.com/deltaforce.ftw/" target="_blank">
-    deltaforce.ftw
-  </a>
-
-  <a href="https://www.instagram.com/joroedits/" target="_blank">
-    joroedits
-  </a>
-
-  <a href="https://www.instagram.com/kalludaket/" target="_blank">
-    kalludaket
-  </a>
-
-  <a href="#">
-    unknown01
-  </a>
-
-  <a href="#">
-    unknown02
-  </a>
-
-  <a href="#">
-    unknown03
-  </a>
-
-</div>
-
-<a class="back" href="../">
-← back
+<a class="home-btn" href="https://ee6h0.github.io/">
+← home
 </a>
+
+<div class="sort-buttons">
+
+  <button onclick="sortAZ()">
+    A → Z
+  </button>
+
+  <button onclick="sortZA()">
+    Z → A
+  </button>
+
+</div>
+
+<div class="creators-grid" id="creatorsGrid">
+
+<a class="creator"
+href="https://www.instagram.com/dalitkrantikari/"
+target="_blank">
+dalitkrantikari
+</a>
+
+<a class="creator"
+href="https://www.instagram.com/b2und_/"
+target="_blank">
+b2und_
+</a>
+
+<a class="creator"
+href="https://www.instagram.com/deltaforce.ftw/"
+target="_blank">
+deltaforce.ftw
+</a>
+
+<a class="creator"
+href="https://www.instagram.com/joroedits/"
+target="_blank">
+joroedits
+</a>
+
+<a class="creator"
+href="https://www.instagram.com/kalludaket/"
+target="_blank">
+kalludaket
+</a>
+
+<a class="creator"
+href="#">
+unknown01
+</a>
+
+<a class="creator"
+href="#">
+unknown02
+</a>
+
+<a class="creator"
+href="#">
+unknown03
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+function sortAZ(){
+
+  const grid =
+  document.getElementById("creatorsGrid");
+
+  const items =
+  Array.from(
+    grid.getElementsByClassName("creator")
+  );
+
+  items.sort((a,b)=>
+    a.innerText.localeCompare(b.innerText)
+  );
+
+  grid.innerHTML = "";
+
+  items.forEach(item =>
+    grid.appendChild(item)
+  );
+}
+
+function sortZA(){
+
+  const grid =
+  document.getElementById("creatorsGrid");
+
+  const items =
+  Array.from(
+    grid.getElementsByClassName("creator")
+  );
+
+  items.sort((a,b)=>
+    b.innerText.localeCompare(a.innerText)
+  );
+
+  grid.innerHTML = "";
+
+  items.forEach(item =>
+    grid.appendChild(item)
+  );
+}
+
+</script>
 
 </body>
 </html>
