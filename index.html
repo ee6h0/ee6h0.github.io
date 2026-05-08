@@ -110,14 +110,31 @@
 
 
 </div>
-
 <script>
+
+const savedTheme =
+localStorage.getItem("theme");
+
+if(savedTheme){
+
+  document.body.classList.add(savedTheme);
+}
 
 let theme = 0;
 
 function switchTheme(){
 
+  const themes = [
+    "",
+    "sunset",
+    "forest",
+    "ice"
+  ];
+
   theme++;
+
+  const current =
+  themes[theme % themes.length];
 
   document.body.classList.remove(
     "sunset",
@@ -125,29 +142,21 @@ function switchTheme(){
     "ice"
   );
 
-  if(theme % 4 === 1){
+  if(current){
 
-    document.body.classList.add("sunset");
-
+    document.body.classList.add(current);
   }
 
-  else if(theme % 4 === 2){
-
-    document.body.classList.add("forest");
-
-  }
-
-  else if(theme % 4 === 3){
-
-    document.body.classList.add("ice");
-
-  }
-
+  localStorage.setItem(
+    "theme",
+    current
+  );
 }
 
 </script>
+
   
-<script>
+</script>
 
   document.addEventListener("contextmenu", e => {
 
