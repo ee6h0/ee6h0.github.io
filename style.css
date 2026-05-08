@@ -236,3 +236,100 @@ li{
 .card li{
   margin-bottom:14px;
 }
+
+
+#lockscreen{
+  position:fixed;
+  inset:0;
+
+  background:#050505;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:99999;
+}
+
+.lock-box{
+  width:90%;
+  max-width:340px;
+
+  background:#111111;
+
+  border:1px solid #2a2a2a;
+  border-radius:20px;
+
+  padding:35px 25px;
+
+  text-align:center;
+
+  box-shadow:0 0 40px rgba(0,0,0,0.6);
+}
+
+.lock-box h1{
+  font-size:42px;
+  margin-bottom:10px;
+}
+
+.lock-text{
+  color:#888888;
+  margin-bottom:25px;
+}
+
+.lock-box input{
+  width:100%;
+
+  background:#0a0a0a;
+
+  border:1px solid #2a2a2a;
+  border-radius:12px;
+
+  padding:14px;
+
+  color:white;
+
+  font-size:16px;
+
+  outline:none;
+
+  margin-bottom:15px;
+
+  font-family:'JetBrains Mono', monospace;
+}
+
+.lock-box input:focus{
+  border-color:#8b5cf6;
+}
+
+.lock-box button{
+  width:100%;
+
+  background:#8b5cf6;
+
+  color:white;
+
+  border:none;
+
+  border-radius:12px;
+
+  padding:14px;
+
+  font-size:15px;
+
+  cursor:pointer;
+
+  font-family:'JetBrains Mono', monospace;
+
+  transition:0.2s ease;
+}
+
+.lock-box button:hover{
+  opacity:0.9;
+}
+
+#error{
+  color:#ff6666;
+  margin-top:14px;
+  font-size:14px;
+}
