@@ -6,12 +6,14 @@ const themes = [
   "sunset",
   "forest",
   "ice",
-  "blood",
+  "crimson",
   "gold",
+  "midnight",
   "ocean",
-  "matrix",
-  "pink",
-  "lavender"
+  "rose",
+  "matrix"
+
+];
 
 ];
 
@@ -50,15 +52,15 @@ function switchTheme(){
 
   document.body.classList.remove(
 
-    "sunset",
-    "forest",
-    "ice",
-    "blood",
-    "gold",
-    "ocean",
-    "matrix",
-    "pink",
-    "lavender"
+  "sunset",
+  "forest",
+  "ice",
+  "crimson",
+  "gold",
+  "midnight",
+  "ocean",
+  "rose",
+  "matrix"
 
   );
 
