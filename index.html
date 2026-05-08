@@ -14,7 +14,35 @@
 
 </head>
 
-<body>
+  <body>
+
+<script>
+
+const password = "711";
+
+const user = prompt("Enter password");
+
+if(user !== password){
+
+  document.body.innerHTML = `
+    <div style="
+      background:#0f0f0f;
+      color:white;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:monospace;
+      font-size:20px;
+    ">
+      Access Denied
+    </div>
+  `;
+
+}
+
+</script>
+
   
 <nav class="navbar">
     <div class="nav-logo">ee6h0</div>
