@@ -429,3 +429,65 @@ li{
 
   background-size:40px 40px;
 }
+
+/* FLOATING DOTS */
+
+.dots{
+
+  position:fixed;
+
+  inset:0;
+
+  z-index:-1;
+
+  pointer-events:none;
+
+  overflow:hidden;
+}
+
+.dots::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background-image:
+  radial-gradient(
+    var(--accent) 1px,
+    transparent 1px
+  );
+
+  background-size:32px 32px;
+
+  opacity:0.08;
+
+  animation:moveDots 18s linear infinite;
+}
+
+@keyframes moveDots{
+
+  from{
+
+    transform:translateY(0px);
+  }
+
+  to{
+
+    transform:translateY(32px);
+  }
+}
+
+
+/* visibility controls */
+
+.grid-bg{
+
+  display:block;
+}
+
+.dots{
+
+  display:none;
+}
