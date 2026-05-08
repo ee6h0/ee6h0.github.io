@@ -16,31 +16,40 @@
 
   <body>
 
+<div id="lockscreen">
+  <div class="lock-box">
+    <h1>ee6h0</h1>
+
+    <p class="lock-text">
+      private archive
+    </p>
+
+    <input type="password" id="password" placeholder="enter password">
+
+    <button onclick="checkPassword()">
+      enter
+    </button>
+
+    <p id="error"></p>
+  </div>
+</div>
+
 <script>
+function checkPassword() {
 
-const password = "711";
+  const password = document.getElementById("password").value;
 
-const user = prompt("Enter password");
+  if(password === "711"){
 
-if(user !== password){
+    document.getElementById("lockscreen").style.display = "none";
 
-  document.body.innerHTML = `
-    <div style="
-      background:#0f0f0f;
-      color:white;
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      font-family:monospace;
-      font-size:20px;
-    ">
-      Access Denied
-    </div>
-  `;
+  } else {
+
+    document.getElementById("error").innerText = "wrong password";
+
+  }
 
 }
-
 </script>
 
   
