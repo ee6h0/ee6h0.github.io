@@ -1,5 +1,5 @@
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 :root{
@@ -56,14 +56,6 @@ html{
   --accent:#6bbcff;
 }
 
-h2{
-    scroll-margin-top:120px;
-}
-
-.section{
-  scroll-margin-top:120px;
-}
-
 *{
   margin:0;
   padding:0;
@@ -73,6 +65,7 @@ h2{
 body{
 
   background:var(--bg);
+
   color:var(--text);
 
   font-family:'JetBrains Mono', monospace;
@@ -83,7 +76,9 @@ body{
 
   user-select:none;
 
-  transition:0.3s ease;
+  transition:
+  background 0.3s ease,
+  color 0.3s ease;
 }
 
 /* NAVBAR */
@@ -107,25 +102,17 @@ body{
   margin-bottom:30px;
 
   backdrop-filter:blur(10px);
+
+  transition:0.3s ease;
 }
 
-.nav-logo,
-.logo{
+.nav-logo{
 
   font-size:24px;
 
   font-weight:bold;
 
   color:var(--text);
-}
-
-.navbar-content{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:center;
 }
 
 .nav-links{
@@ -244,6 +231,8 @@ h1{
 .section{
 
   margin-bottom:40px;
+
+  scroll-margin-top:120px;
 }
 
 .section-title{
@@ -299,10 +288,12 @@ h1{
 /* LISTS */
 
 ul{
+
   padding-left:20px;
 }
 
 li{
+
   margin-bottom:10px;
 }
 
@@ -315,133 +306,6 @@ li{
   color:var(--text2);
 
   margin-bottom:15px;
-}
-
-/* LOCKSCREEN */
-
-#lockscreen{
-
-  position:fixed;
-
-  inset:0;
-
-  background:var(--bg);
-
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  z-index:99999;
-}
-
-.lock-box{
-
-  width:90%;
-
-  max-width:340px;
-
-  background:var(--bg2);
-
-  border:1px solid var(--border);
-
-  border-radius:20px;
-
-  padding:35px 25px;
-
-  text-align:center;
-
-  box-shadow:0 0 40px rgba(0,0,0,0.6);
-}
-
-.lock-box h1{
-
-  font-size:42px;
-
-  margin-bottom:10px;
-}
-
-.lock-text{
-
-  color:var(--text2);
-
-  margin-bottom:25px;
-}
-
-.lock-box input{
-
-  width:100%;
-
-  background:var(--bg);
-
-  border:1px solid var(--border);
-
-  border-radius:12px;
-
-  padding:14px;
-
-  color:var(--text);
-
-  font-size:16px;
-
-  outline:none;
-
-  margin-bottom:15px;
-
-  font-family:'JetBrains Mono', monospace;
-}
-
-.lock-box input:focus{
-
-  border-color:var(--accent);
-}
-
-.lock-box button{
-
-  width:100%;
-
-  background:var(--accent);
-
-  color:white;
-
-  border:none;
-
-  border-radius:12px;
-
-  padding:14px;
-
-  font-size:15px;
-
-  cursor:pointer;
-
-  font-family:'JetBrains Mono', monospace;
-
-  transition:0.2s ease;
-}
-
-.lock-box button:hover{
-
-  opacity:0.9;
-}
-
-#error{
-
-  color:#ff6666;
-
-  margin-top:14px;
-
-  font-size:14px;
-}
-
-.lock-box input::placeholder{
-
-  text-align:center;
-}
-
-#username{
-
-  margin-bottom:12px;
 }
 
 /* THEME BUTTON */
