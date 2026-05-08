@@ -341,3 +341,27 @@ li{
 #username{
   margin-bottom:12px;
 }
+
+.theme-btn{
+
+  background:none;
+
+  border:1px solid #2d2d2d;
+
+  color:#8b5cf6;
+
+  padding:8px 14px;
+
+  border-radius:10px;
+
+  font-family:'JetBrains Mono', monospace;
+
+  cursor:pointer;
+
+  transition:0.2s;
+}
+
+.theme-btn:hover{
+
+  color:white;
+}
