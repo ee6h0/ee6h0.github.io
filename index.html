@@ -73,6 +73,7 @@
     src="assets/images/octopus.png"
     alt="octopus"
     class="profile-pic"
+    draggable="false"
     >
 </div>
 
@@ -143,6 +144,23 @@ function switchTheme(){
 }
 
 </script>
+  
+<script>
+
+  document.addEventListener("contextmenu", e => {
+
+    if(e.target.tagName === "IMG"){
+
+      e.preventDefault();
+
+    }
+
+  });
+
+  </script>
+
+</body>
+</html>
 
 </body>
 </html>
