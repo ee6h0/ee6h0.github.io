@@ -122,11 +122,13 @@ h1{
   display:grid;
 
   grid-template-columns:
-  repeat(4, 1fr);
+  repeat(auto-fit, minmax(180px, 1fr));
 
-  gap:34px 80px;
+  gap:34px 40px;
+
+  width:100%;
 }
-
+  
 /* USERNAMES */
 
 .creator{
