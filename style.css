@@ -479,6 +479,12 @@ li{
   }
 }
 
+.grid-bg,
+.dots{
+
+  display:none;
+}
+
 
 /* visibility controls */
 
