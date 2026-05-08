@@ -22,15 +22,13 @@
   rel="stylesheet">
 
   <link rel="stylesheet"
-  href="style.css?v=2">
+  href="style.css?v=3">
 
 </head>
 
-<body class="show-both">
+<body class="show-grid">
 
 <div class="grid-bg"></div>
-
-<div class="dots"></div>
 
 <nav class="navbar">
 
@@ -44,10 +42,12 @@
       Repo
     </a>
 
-    <a href="#"
+    <!-- FIXED THEME BUTTON -->
+    <button
+    class="theme-toggle"
     onclick="switchTheme()">
       Theme
-    </a>
+    </button>
 
   </div>
 
@@ -132,6 +132,23 @@
 
 <script>
 
+/* ALL THEMES */
+
+const themes = [
+
+  "",
+  "sunset",
+  "forest",
+  "ice",
+  "crimson",
+  "gold",
+  "midnight",
+  "ocean",
+  "rose",
+  "matrix"
+
+];
+
 /* LOAD SAVED THEME */
 
 const savedTheme =
@@ -139,36 +156,54 @@ localStorage.getItem("theme");
 
 if(savedTheme){
 
-  document.body.classList.add(savedTheme);
+  document.body.classList.add(
+    savedTheme
+  );
 }
 
-/* THEME SWITCHER */
+/* GET CURRENT THEME */
 
-let theme = 0;
+let theme =
+themes.indexOf(savedTheme);
+
+if(theme < 0){
+
+  theme = 0;
+}
+
+/* SWITCH THEME */
 
 function switchTheme(){
 
-  const themes = [
-    "",
-    "sunset",
-    "forest",
-    "ice"
-  ];
-
   theme++;
 
-  const current =
-  themes[theme % themes.length];
+  if(theme >= themes.length){
+
+    theme = 0;
+  }
 
   document.body.classList.remove(
+
     "sunset",
     "forest",
-    "ice"
+    "ice",
+    "crimson",
+    "gold",
+    "midnight",
+    "ocean",
+    "rose",
+    "matrix"
+
   );
+
+  const current =
+  themes[theme];
 
   if(current){
 
-    document.body.classList.add(current);
+    document.body.classList.add(
+      current
+    );
   }
 
   localStorage.setItem(
