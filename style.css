@@ -333,3 +333,7 @@ li{
   margin-top:14px;
   font-size:14px;
 }
+
+.lock-box input::placeholder{
+  text-align:center;
+}
