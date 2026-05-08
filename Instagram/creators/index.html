@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Creators</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#050505;
+  color:#ffffff;
+  font-family:'JetBrains Mono', monospace;
+  padding:28px 20px 60px;
+}
+
+.title-box{
+  background:#111111;
+  border:1px solid #222;
+  border-radius:28px;
+  padding:38px 30px;
+  margin-bottom:40px;
+}
+
+.title-box h1{
+  font-size:52px;
+  margin-bottom:18px;
+}
+
+.title-box p{
+  color:#8d8d8d;
+  line-height:1.8;
+  font-size:15px;
+}
+
+.creator-stack{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+
+.creator{
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+  padding:26px;
+  background:linear-gradient(
+    135deg,
+    #111111,
+    #171717
+  );
+  border:1px solid #242424;
+  transition:0.25s;
+}
+
+.creator:hover{
+  transform:translateY(-4px);
+  border-color:#8b5cf6;
+}
+
+.creator::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:5px;
+  height:100%;
+  background:#8b5cf6;
+}
+
+.creator a{
+  text-decoration:none;
+  color:white;
+}
+
+.creator-name{
+  font-size:24px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.creator-id{
+  color:#9f9f9f;
+  font-size:14px;
+}
+
+.creator-tag{
+  margin-top:18px;
+  display:inline-block;
+  padding:7px 14px;
+  border-radius:999px;
+  background:#1d1333;
+  color:#b48cff;
+  font-size:12px;
+}
+
+.back{
+  display:inline-block;
+  margin-top:45px;
+  color:#8b5cf6;
+  text-decoration:none;
+  font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="title-box">
+  <h1>Creators</h1>
+
+  <p>
+    archived creator accounts, edits, ideas,
+    gaming clips, and visual inspiration.
+  </p>
+</div>
+
+<div class="creator-stack">
+
+  <div class="creator">
+    <a href="https://www.instagram.com/dalitkrantikari/" target="_blank">
+
+      <div class="creator-name">
+        Dalit Krantikari
+      </div>
+
+      <div class="creator-id">
+        @dalitkrantikari
+      </div>
+
+      <div class="creator-tag">
+        political
+      </div>
+
+    </a>
+  </div>
+
+  <div class="creator">
+    <a href="https://www.instagram.com/b2und_/" target="_blank">
+
+      <div class="creator-name">
+        b2und
+      </div>
+
+      <div class="creator-id">
+        @b2und_
+      </div>
+
+      <div class="creator-tag">
+        edits
+      </div>
+
+    </a>
+  </div>
+
+  <div class="creator">
+    <a href="https://www.instagram.com/deltaforce.ftw/" target="_blank">
+
+      <div class="creator-name">
+        Delta Force
+      </div>
+
+      <div class="creator-id">
+        @deltaforce.ftw
+      </div>
+
+      <div class="creator-tag">
+        gaming
+      </div>
+
+    </a>
+  </div>
+
+  <div class="creator">
+    <a href="https://www.instagram.com/joroedits/" target="_blank">
+
+      <div class="creator-name">
+        Joro Edits
+      </div>
+
+      <div class="creator-id">
+        @joroedits
+      </div>
+
+      <div class="creator-tag">
+        anime edits
+      </div>
+
+    </a>
+  </div>
+
+  <div class="creator">
+    <a href="https://www.instagram.com/kalludaket/" target="_blank">
+
+      <div class="creator-name">
+        Kallu Da Ket
+      </div>
+
+      <div class="creator-id">
+        @kalludaket
+      </div>
+
+      <div class="creator-tag">
+        meme / misc
+      </div>
+
+    </a>
+  </div>
+
+</div>
+
+<a class="back" href="../">
+← back
+</a>
+
+</body>
+</html>
