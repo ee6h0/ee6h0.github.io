@@ -110,7 +110,8 @@
 
 
 </div>
-<script>
+
+  <script>
 
 const savedTheme =
 localStorage.getItem("theme");
@@ -153,22 +154,18 @@ function switchTheme(){
   );
 }
 
-</script>
+document.addEventListener("contextmenu", e => {
 
-  
-</script>
+  if(e.target.tagName === "IMG"){
 
-  document.addEventListener("contextmenu", e => {
+    e.preventDefault();
 
-    if(e.target.tagName === "IMG"){
+  }
 
-      e.preventDefault();
-
-    }
-
-  });
+});
 
   </script>
+
 
 </body>
 </html>
