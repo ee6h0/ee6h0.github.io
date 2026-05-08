@@ -15,8 +15,6 @@ const themes = [
 
 ];
 
-];
-
 /* LOAD SAVED THEME */
 
 const savedTheme =
@@ -24,9 +22,7 @@ localStorage.getItem("theme");
 
 if(savedTheme){
 
-  document.body.classList.add(
-    savedTheme
-  );
+  document.body.classList.add(savedTheme);
 }
 
 /* CURRENT THEME INDEX */
@@ -41,7 +37,7 @@ if(theme < 0){
 
 /* SWITCH THEME */
 
-function switchTheme(){
+window.switchTheme = function(){
 
   theme++;
 
@@ -52,15 +48,15 @@ function switchTheme(){
 
   document.body.classList.remove(
 
-  "sunset",
-  "forest",
-  "ice",
-  "crimson",
-  "gold",
-  "midnight",
-  "ocean",
-  "rose",
-  "matrix"
+    "sunset",
+    "forest",
+    "ice",
+    "crimson",
+    "gold",
+    "midnight",
+    "ocean",
+    "rose",
+    "matrix"
 
   );
 
@@ -69,16 +65,14 @@ function switchTheme(){
 
   if(current){
 
-    document.body.classList.add(
-      current
-    );
+    document.body.classList.add(current);
   }
 
   localStorage.setItem(
     "theme",
     current
   );
-}
+};
 
 /* DISABLE IMAGE MENU */
 
@@ -97,7 +91,7 @@ document.addEventListener(
 
 /* SORT A-Z */
 
-function sortAZ(){
+window.sortAZ = function(){
 
   const grid =
   document.getElementById(
@@ -124,11 +118,11 @@ function sortAZ(){
   items.forEach(item =>
     grid.appendChild(item)
   );
-}
+};
 
 /* SORT Z-A */
 
-function sortZA(){
+window.sortZA = function(){
 
   const grid =
   document.getElementById(
@@ -155,4 +149,4 @@ function sortZA(){
   items.forEach(item =>
     grid.appendChild(item)
   );
-}
+};
