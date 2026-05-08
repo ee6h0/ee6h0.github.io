@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,173 +11,141 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css?v=2">
 
 </head>
 
-  <body>
+<body>
 
-<div id="lockscreen">
-  <div class="lock-box">
-    <h1>ee6h0</h1>
+<nav class="navbar">
 
-    <p class="lock-text">
-      
-    </p>
+  <div class="nav-logo">
+    ee6h0
+  </div>
 
-    <input
-type="text"
-id="username"
-placeholder="username">
+  <div class="nav-links">
 
-<input
-type="password"
-id="password"
-placeholder="password">
+    <a href="https://ee6h0.github.io/">
+      Home
+    </a>
 
-    <button onclick="checkPassword()">
-      enter
+    <a href="https://github.com/ee6h0/ee6h0.github.io/">
+      Repo
+    </a>
+
+    <button class="theme-btn" onclick="switchTheme()">
+      Theme
     </button>
 
-    <p id="error"></p>
   </div>
-</div>
 
-<script>
-
-function checkPassword() {
-
-  const username =
-  document.getElementById("username").value;
-
-  const password =
-  document.getElementById("password").value;
-
-  /* MAIN WEBSITE */
-
-  if(
-    username === "ee6h0" &&
-    password === "HuTxWv%a!0xz*KPQ8R%znBG6n@uxwt8A&Fmr6nkk^@38qBTzjyZyK79sksZ2Sq3W" 
-  ){
-
-    document.getElementById("lockscreen")
-    .style.display = "none";
-
-  }
-
-  /* SECRET PAGE */
-
-  else if(
-    username === "secret" &&
-    password === "Mzc5PDYvWXj0UxH@Njth6NQ2j*pr&K41yYpTDNA&HP#MNw5Bb0$v&^5b510ecsjq"
-  ){
-
-    window.location.href = "/x7qk91/";
-
-  }
-
-  /* ADMIN */
-
-  else if(
-    username === "admin" &&
-    password === "6f2VtHXCQ^y*gY6rN84x1ugsRZjc!JD14SPE!&5^QPaZMN&Bf9qtw2dT^8eQgjdg"
-  ){
-
-    window.location.href = "/admin/";
-
-  }
-
-  /* GUEST */
-
-  else if(
-    username === "guest" &&
-    password === "711"
-  ){
-
-    window.location.href = "/guest/";
-
-  }
-
-  else{
-
-    document.getElementById("error")
-    .innerText = "wrong username or password";
-
-  }
-
-}
-
-</script>
-  
-<nav class="navbar">
-    <div class="nav-logo">ee6h0</div>
-  
-    <div class="nav-links">
-        <a href="ee6h0.github.io/">Home</a>
-        <a href="https://github.com/ee6h0/ee6h0.github.io/">Repo</a>
-        <button class="theme-btn" onclick="switchTheme()">
-Theme
-        </button>
-        
-    </div>
 </nav>
 
-  <div class="container">
+<div class="container">
 
-    <div class="hero">
+  <div class="hero">
 
-      <h1>.ixx</h1>
+    <h1>.ixx</h1>
 
-      <p class="subtitle">
-        hi!!! welcome, idk how to code. [ai-generated]
-      </p>
+    <p class="subtitle">
+      hi!!! welcome, idk how to code. [ai-generated]
+    </p>
 
-      <div class="links">
-        <a href="https://instagram.com/ee6h0/">Instagram</a>
-        <a href="https://t.me/bwz89/">Telegram</a>
-        <a href="mailto:xexcn@proton.me">Mail</a>
-      </div>
+    <div class="links">
 
-    </div>
+      <a href="https://instagram.com/ee6h0/">
+        Instagram
+      </a>
 
-    <div class="section">
+      <a href="https://t.me/bwz89/">
+        Telegram
+      </a>
 
-      <h2 id="instagram" class="section-title">Instagram</h2>
-
-      <div class="card">
-
-
-        <ul>
-          <li><a href="#">Users</a></li>
-          <li><a href="/instagram/creators">Creators</a></li>
-        </ul>
-
-      </div>
-
-      
-    <div class="section">
-
-      <h2 id="watchlist" class="section-title">Watchlist</h2>
-
-      <div class="card">
-
-        <ul>
-          <li><a href="watchlist/codes">Codes</a></li>
-          <li><a href="watchlist/misc.">Misc.</a></li>
-          <li><a href="watchlist/animation/">Animation</a></li>
-          <li><a href="watchlist/asian">Asian</a></li>
-          <li><a href="watchlist/indian">Indian</a></li>
-                     </ul>
-
-          </li>
-
-        </ul>
-
-      </div>
+      <a href="mailto:xexcn@proton.me">
+        Mail
+      </a>
 
     </div>
 
   </div>
+
+  <div class="section">
+
+    <h2 id="instagram" class="section-title">
+      Instagram
+    </h2>
+
+    <div class="card">
+
+      <ul>
+
+        <li>
+          <a href="#">
+            Users
+          </a>
+        </li>
+
+        <li>
+          <a href="/instagram/creators">
+            Creators
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+  <div class="section">
+
+    <h2 id="watchlist" class="section-title">
+      Watchlist
+    </h2>
+
+    <div class="card">
+
+      <ul>
+
+        <li>
+          <a href="watchlist/codes">
+            Codes
+          </a>
+        </li>
+
+        <li>
+          <a href="watchlist/misc.">
+            Misc.
+          </a>
+        </li>
+
+        <li>
+          <a href="watchlist/animation/">
+            Animation
+          </a>
+        </li>
+
+        <li>
+          <a href="watchlist/asian">
+            Asian
+          </a>
+        </li>
+
+        <li>
+          <a href="watchlist/indian">
+            Indian
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
 <script>
 
 let theme = 0;
@@ -212,6 +181,6 @@ function switchTheme(){
 }
 
 </script>
-    
+
 </body>
 </html>
