@@ -399,3 +399,79 @@ li{
   }
 
 }
+
+/* AMBIENT */
+
+.ambient{
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  overflow:hidden;
+
+  z-index:-1;
+}
+
+.ambient::before,
+.ambient::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  border-radius:50%;
+
+  filter:blur(120px);
+
+  opacity:0.08;
+
+  animation:float 18s ease-in-out infinite;
+}
+
+.ambient::before{
+
+  background:var(--accent);
+
+  top:-120px;
+  left:-120px;
+}
+
+.ambient::after{
+
+  background:var(--text);
+
+  bottom:-180px;
+  right:-140px;
+
+  animation-delay:9s;
+}
+
+@keyframes float{
+
+  0%{
+
+    transform:
+    translateY(0px)
+    translateX(0px);
+  }
+
+  50%{
+
+    transform:
+    translateY(40px)
+    translateX(30px);
+  }
+
+  100%{
+
+    transform:
+    translateY(0px)
+    translateX(0px);
+  }
+}
