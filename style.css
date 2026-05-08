@@ -482,12 +482,23 @@ li{
 
 /* visibility controls */
 
-.grid-bg{
-
+.show-grid .grid-bg{
   display:block;
 }
 
-.dots{
-
+.show-grid .dots{
   display:none;
+}
+
+.show-dots .grid-bg{
+  display:none;
+}
+
+.show-dots .dots{
+  display:block;
+}
+
+.show-both .grid-bg,
+.show-both .dots{
+  display:block;
 }
