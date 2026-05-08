@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -23,81 +23,85 @@ body{
   background:#050505;
   color:white;
   font-family:'JetBrains Mono', monospace;
-  padding:28px;
+
+  padding:40px 22px;
 }
 
-.header{
-  margin-bottom:60px;
-}
+h1{
+  font-size:20px;
+  font-weight:400;
+  margin-bottom:45px;
 
-.header h1{
-  font-size:58px;
-  margin-bottom:12px;
-}
-
-.header p{
-  color:#777;
-  line-height:1.7;
-  max-width:500px;
-}
-
-.creator-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:18px;
-}
-
-.creator-grid a{
-  text-decoration:none;
   color:#d1d1d1;
-
-  border:1px solid #1d1d1d;
-  background:#0b0b0b;
-
-  padding:38px 20px;
-
-  border-radius:22px;
-
-  font-size:18px;
-  font-weight:700;
-
-  transition:0.2s ease;
 }
 
-.creator-grid a:hover{
+.creator-wall{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:18px 12px;
+}
+
+.creator-wall a{
+
+  text-decoration:none;
+
+  color:#6d6d6d;
+
+  font-size:13px;
+
+  font-weight:400;
+
+  transition:0.18s ease;
+
+  width:fit-content;
+}
+
+.creator-wall a:hover{
+
   color:#8b5cf6;
-  border-color:#8b5cf6;
-  transform:translateY(-3px);
+
+  transform:translateY(-2px);
 }
 
-.creator-grid a:active{
-  transform:scale(0.98);
+.creator-wall a:nth-child(2){
+  margin-left:14px;
+}
+
+.creator-wall a:nth-child(3){
+  margin-top:8px;
+}
+
+.creator-wall a:nth-child(4){
+  margin-left:30px;
+}
+
+.creator-wall a:nth-child(5){
+  margin-top:14px;
+}
+
+.creator-wall a:nth-child(6){
+  margin-left:8px;
 }
 
 .back{
+
   display:inline-block;
-  margin-top:50px;
+
+  margin-top:70px;
 
   text-decoration:none;
-  color:#666;
 
-  font-size:14px;
+  color:#555;
+
+  font-size:12px;
 }
 
 .back:hover{
   color:#8b5cf6;
-}
-
-@media(max-width:700px){
-
-  .creator-grid{
-    grid-template-columns:1fr;
-  }
-
-  .header h1{
-    font-size:44px;
-  }
-
 }
 
 </style>
@@ -105,41 +109,33 @@ body{
 
 <body>
 
-<div class="header">
+<h1>Creators</h1>
 
-  <h1>Creators</h1>
+<div class="creator-wall">
 
-  <p>
-    saved accounts / archive references
-  </p>
+<a href="https://www.instagram.com/dalitkrantikari/" target="_blank">
+@dalitkrantikari
+</a>
 
-</div>
+<a href="https://www.instagram.com/b2und_/" target="_blank">
+@b2und_
+</a>
 
-<div class="creator-grid">
+<a href="https://www.instagram.com/deltaforce.ftw/" target="_blank">
+@deltaforce.ftw
+</a>
 
-  <a href="https://www.instagram.com/dalitkrantikari/" target="_blank">
-    @dalitkrantikari
-  </a>
+<a href="https://www.instagram.com/joroedits/" target="_blank">
+@joroedits
+</a>
 
-  <a href="https://www.instagram.com/b2und_/" target="_blank">
-    @b2und_
-  </a>
+<a href="https://www.instagram.com/kalludaket/" target="_blank">
+@kalludaket
+</a>
 
-  <a href="https://www.instagram.com/deltaforce.ftw/" target="_blank">
-    @deltaforce.ftw
-  </a>
-
-  <a href="https://www.instagram.com/joroedits/" target="_blank">
-    @joroedits
-  </a>
-
-  <a href="https://www.instagram.com/kalludaket/" target="_blank">
-    @kalludaket
-  </a>
-
-  <a href="#">
-    @unknown
-  </a>
+<a href="#">
+@unknown
+</a>
 
 </div>
 
