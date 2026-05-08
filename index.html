@@ -35,23 +35,70 @@
 </div>
 
 <script>
+
 function checkPassword() {
 
-  const password = document.getElementById("password").value;
+  const username =
+  document.getElementById("username").value;
 
-  if(password === "711"){
+  const password =
+  document.getElementById("password").value;
 
-    document.getElementById("lockscreen").style.display = "none";
+  /* MAIN WEBSITE */
 
-  } else {
+  if(
+    username === "ee6h0" &&
+    password === "HuTxWv%a!0xz*KPQ8R%znBG6n@uxwt8A&Fmr6nkk^@38qBTzjyZyK79sksZ2Sq3W"
+  ){
 
-    document.getElementById("error").innerText = "wrong password";
+    document.getElementById("lockscreen")
+    .style.display = "none";
+
+  }
+
+  /* SECRET PAGE */
+
+  else if(
+    username === "secret" &&
+    password === "Mzc5PDYvWXj0UxH@Njth6NQ2j*pr&K41yYpTDNA&HP#MNw5Bb0$v&^5b510ecsjq"
+  ){
+
+    window.location.href = "/x7qk91/";
+
+  }
+
+  /* ADMIN */
+
+  else if(
+    username === "admin" &&
+    password === "6f2VtHXCQ^y*gY6rN84x1ugsRZjc!JD14SPE!&5^QPaZMN&Bf9qtw2dT^8eQgjdg"
+  ){
+
+    window.location.href = "/admin/";
+
+  }
+
+  /* GUEST */
+
+  else if(
+    username === "guest" &&
+    password === "711"
+  ){
+
+    window.location.href = "/guest/";
+
+  }
+
+  else{
+
+    document.getElementById("error")
+    .innerText = "wrong username or password";
 
   }
 
 }
-</script>
 
+</script>
   
 <nav class="navbar">
     <div class="nav-logo">ee6h0</div>
