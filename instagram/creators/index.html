@@ -84,7 +84,9 @@ body{
 
   padding:34px 24px;
 
-  transition:0.3s ease;
+  transition:
+  background 0.3s ease,
+  color 0.3s ease;
 }
 
 /* PAGE */
@@ -215,7 +217,7 @@ h1{
   color:var(--accent);
 }
 
-/* MOBILE */
+/* TABLET */
 
 @media(max-width:900px){
 
@@ -225,6 +227,8 @@ h1{
     repeat(2, minmax(0, 1fr));
   }
 }
+
+/* MOBILE */
 
 @media(max-width:520px){
 
@@ -240,10 +244,15 @@ h1{
 
   .creators-grid{
 
-  grid-template-columns:
-  repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
-  gap:18px 14px;
+    gap:18px 14px;
+  }
+
+  .creator{
+
+    font-size:13px;
   }
 
   .sort-buttons{
@@ -344,11 +353,31 @@ unknown03
 
 <script>
 
+/* THEME */
+
+const savedTheme =
+localStorage.getItem("theme");
+
+if(savedTheme){
+
+  document.body.classList.add(savedTheme);
+}
+
 let theme = 0;
 
 function switchTheme(){
 
+  const themes = [
+    "",
+    "sunset",
+    "forest",
+    "ice"
+  ];
+
   theme++;
+
+  const current =
+  themes[theme % themes.length];
 
   document.body.classList.remove(
     "sunset",
@@ -356,23 +385,18 @@ function switchTheme(){
     "ice"
   );
 
-  if(theme % 4 === 1){
+  if(current){
 
-    document.body.classList.add("sunset");
+    document.body.classList.add(current);
   }
 
-  else if(theme % 4 === 2){
-
-    document.body.classList.add("forest");
-  }
-
-  else if(theme % 4 === 3){
-
-    document.body.classList.add("ice");
-  }
+  localStorage.setItem(
+    "theme",
+    current
+  );
 }
 
-/* SORT */
+/* SORT A-Z */
 
 function sortAZ(){
 
@@ -394,6 +418,8 @@ function sortAZ(){
     grid.appendChild(item)
   );
 }
+
+/* SORT Z-A */
 
 function sortZA(){
 
