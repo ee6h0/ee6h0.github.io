@@ -186,38 +186,33 @@ function switchTheme(){
 
   theme++;
 
-  if(theme % 3 === 0){
+  document.body.classList.remove(
+    "sunset",
+    "forest",
+    "ice"
+  );
 
-    document.body.style.background =
-    "#050505";
+  if(theme % 4 === 1){
 
-    document.body.style.color =
-    "#d1d1d1";
-
-  }
-
-  else if(theme % 3 === 1){
-
-    document.body.style.background =
-    "#0d0b08";
-
-    document.body.style.color =
-    "#f3e7c1";
+    document.body.classList.add("sunset");
 
   }
 
-  else{
+  else if(theme % 4 === 2){
 
-    document.body.style.background =
-    "#08110c";
+    document.body.classList.add("forest");
 
-    document.body.style.color =
-    "#cfe8cf";
+  }
+
+  else if(theme % 4 === 3){
+
+    document.body.classList.add("ice");
 
   }
 
 }
 
 </script>
+    
 </body>
 </html>
