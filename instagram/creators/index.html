@@ -240,7 +240,10 @@ h1{
 
   .creators-grid{
 
-    grid-template-columns:1fr;
+  grid-template-columns:
+  repeat(3, minmax(0, 1fr));
+
+  gap:18px 14px;
   }
 
   .sort-buttons{
