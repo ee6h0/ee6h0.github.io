@@ -4,22 +4,34 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Creators</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
 
-<link rel="stylesheet" href="../../style.css">
-<link rel="stylesheet" href="style.css">
+<link
+href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+rel="stylesheet">
 
+<link rel="stylesheet"
+href="../../style.css">
+
+<link rel="stylesheet"
+href="style.css">
 
 </head>
 
 <body>
+
+<div class="grid-bg"></div>
 
 <div class="page">
 
@@ -27,8 +39,12 @@
 
 <div class="line"></div>
 
-<a class="home-btn" href="https://ee6h0.github.io/">
+<a
+class="home-btn"
+href="https://ee6h0.github.io/">
+
 ← home
+
 </a>
 
 <div class="sort-buttons">
@@ -47,149 +63,84 @@
 
 </div>
 
-<div class="creators-grid" id="creatorsGrid">
+<div
+class="creators-grid"
+id="creatorsGrid">
 
-<a class="creator"
+<a
+class="creator"
 href="https://www.instagram.com/dalitkrantikari/"
 target="_blank">
+
 dalitkrantikari
+
 </a>
 
-<a class="creator"
+<a
+class="creator"
 href="https://www.instagram.com/b2und_/"
 target="_blank">
+
 b2und_
+
 </a>
 
-<a class="creator"
+<a
+class="creator"
 href="https://www.instagram.com/deltaforce.ftw/"
 target="_blank">
+
 deltaforce.ftw
+
 </a>
 
-<a class="creator"
+<a
+class="creator"
 href="https://www.instagram.com/joroedits/"
 target="_blank">
+
 joroedits
+
 </a>
 
-<a class="creator"
+<a
+class="creator"
 href="https://www.instagram.com/kalludaket/"
 target="_blank">
+
 kalludaket
+
 </a>
 
-<a class="creator"
+<a
+class="creator"
 href="#">
+
 unknown01
+
 </a>
 
-<a class="creator"
+<a
+class="creator"
 href="#">
+
 unknown02
+
 </a>
 
-<a class="creator"
+<a
+class="creator"
 href="#">
+
 unknown03
+
 </a>
 
 </div>
 
 </div>
 
-<script>
-
-/* THEME */
-
-const savedTheme =
-localStorage.getItem("theme");
-
-if(savedTheme){
-
-  document.body.classList.add(savedTheme);
-}
-
-let theme = 0;
-
-function switchTheme(){
-
-  const themes = [
-    "",
-    "sunset",
-    "forest",
-    "ice"
-  ];
-
-  theme++;
-
-  const current =
-  themes[theme % themes.length];
-
-  document.body.classList.remove(
-    "sunset",
-    "forest",
-    "ice"
-  );
-
-  if(current){
-
-    document.body.classList.add(current);
-  }
-
-  localStorage.setItem(
-    "theme",
-    current
-  );
-}
-
-/* SORT A-Z */
-
-function sortAZ(){
-
-  const grid =
-  document.getElementById("creatorsGrid");
-
-  const items =
-  Array.from(
-    grid.getElementsByClassName("creator")
-  );
-
-  items.sort((a,b)=>
-    a.innerText.localeCompare(b.innerText)
-  );
-
-  grid.innerHTML = "";
-
-  items.forEach(item =>
-    grid.appendChild(item)
-  );
-}
-
-/* SORT Z-A */
-
-function sortZA(){
-
-  const grid =
-  document.getElementById("creatorsGrid");
-
-  const items =
-  Array.from(
-    grid.getElementsByClassName("creator")
-  );
-
-  items.sort((a,b)=>
-    b.innerText.localeCompare(a.innerText)
-  );
-
-  grid.innerHTML = "";
-
-  items.forEach(item =>
-    grid.appendChild(item)
-  );
-}
-
-</script>
+<script src="../../script.js"></script>
 
 </body>
 </html>
