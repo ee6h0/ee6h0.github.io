@@ -26,7 +26,7 @@
 
 </head>
 
-<body class="show-grid">
+<body>
 
 <div class="grid-bg"></div>
 
@@ -42,9 +42,8 @@
       Repo
     </a>
 
-    <!-- FIXED THEME BUTTON -->
     <button
-    class="theme-toggle"
+    class="theme-switch"
     onclick="switchTheme()">
       Theme
     </button>
@@ -130,104 +129,7 @@
 
 </div>
 
-<script>
-
-/* ALL THEMES */
-
-const themes = [
-
-  "",
-  "sunset",
-  "forest",
-  "ice",
-  "crimson",
-  "gold",
-  "midnight",
-  "ocean",
-  "rose",
-  "matrix"
-
-];
-
-/* LOAD SAVED THEME */
-
-const savedTheme =
-localStorage.getItem("theme");
-
-if(savedTheme){
-
-  document.body.classList.add(
-    savedTheme
-  );
-}
-
-/* GET CURRENT THEME */
-
-let theme =
-themes.indexOf(savedTheme);
-
-if(theme < 0){
-
-  theme = 0;
-}
-
-/* SWITCH THEME */
-
-function switchTheme(){
-
-  theme++;
-
-  if(theme >= themes.length){
-
-    theme = 0;
-  }
-
-  document.body.classList.remove(
-
-    "sunset",
-    "forest",
-    "ice",
-    "crimson",
-    "gold",
-    "midnight",
-    "ocean",
-    "rose",
-    "matrix"
-
-  );
-
-  const current =
-  themes[theme];
-
-  if(current){
-
-    document.body.classList.add(
-      current
-    );
-  }
-
-  localStorage.setItem(
-    "theme",
-    current
-  );
-}
-
-/* DISABLE IMAGE MENU */
-
-document.addEventListener(
-  "contextmenu",
-  e => {
-
-    if(
-      e.target.tagName === "IMG"
-    ){
-
-      e.preventDefault();
-    }
-  }
-);
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
