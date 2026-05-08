@@ -17,29 +17,20 @@
 
   background:var(--border);
 
-  margin-bottom:26px;
+  margin:24px 0;
 }
 
-/* HOME */
+/* BUTTONS */
 
-.home-btn{
+.sort-buttons{
 
-  display:inline-block;
+  display:flex;
 
-  margin-bottom:34px;
+  gap:14px;
 
-  text-decoration:none;
+  flex-wrap:wrap;
 
-  color:var(--text2);
-
-  font-size:13px;
-
-  transition:0.2s ease;
-}
-
-.home-btn:hover{
-
-  color:var(--accent);
+  margin:26px 0;
 }
 
 /* GRID */
@@ -51,9 +42,11 @@
   grid-template-columns:
   repeat(3, 1fr);
 
-  gap:24px 18px;
+  gap:34px 50px;
 
   width:100%;
+
+  margin-top:34px;
 }
 
 /* USERNAMES */
@@ -88,6 +81,8 @@
 
     grid-template-columns:
     repeat(2, 1fr);
+
+    gap:28px 34px;
   }
 }
 
@@ -96,5 +91,7 @@
   .creators-grid{
 
     grid-template-columns:1fr;
+
+    gap:22px;
   }
 }
