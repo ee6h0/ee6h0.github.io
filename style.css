@@ -58,9 +58,9 @@ html{
   --accent:#6bbcff;
 }
 
-/* BLOOD */
+/* CRIMSON */
 
-.blood{
+.crimson{
 
   --bg:#140909;
   --bg2:#1f1010;
@@ -86,6 +86,20 @@ html{
   --accent:#ffd166;
 }
 
+/* MIDNIGHT */
+
+.midnight{
+
+  --bg:#07090f;
+  --bg2:#111521;
+  --border:#1f2940;
+
+  --text:#dbe7ff;
+  --text2:#7f8fb3;
+
+  --accent:#7aa2ff;
+}
+
 /* OCEAN */
 
 .ocean{
@@ -100,6 +114,20 @@ html{
   --accent:#3dd6ff;
 }
 
+/* ROSE */
+
+.rose{
+
+  --bg:#160d14;
+  --bg2:#24131f;
+  --border:#442438;
+
+  --text:#ffe3f6;
+  --text2:#d19ec0;
+
+  --accent:#ff79c6;
+}
+
 /* MATRIX */
 
 .matrix{
@@ -112,34 +140,6 @@ html{
   --text2:#87b487;
 
   --accent:#5cff87;
-}
-
-/* PINK */
-
-.pink{
-
-  --bg:#160d14;
-  --bg2:#24131f;
-  --border:#442438;
-
-  --text:#ffe3f6;
-  --text2:#d19ec0;
-
-  --accent:#ff79c6;
-}
-
-/* LAVENDER */
-
-.lavender{
-
-  --bg:#13111a;
-  --bg2:#1d1928;
-  --border:#352d4a;
-
-  --text:#f0e8ff;
-  --text2:#b7a8d6;
-
-  --accent:#b388ff;
 }
 
 *{
@@ -217,30 +217,34 @@ body{
   color:var(--text);
 }
 
-/* THEME BUTTON */
+/* GLOBAL BUTTONS */
 
-.theme-switch{
+button{
 
-  background:none;
+  background:var(--bg2);
 
-  border:none;
+  border:1px solid var(--border);
 
-  color:var(--accent);
+  color:var(--text2);
 
-  font-size:15px;
+  padding:10px 18px;
+
+  border-radius:12px;
 
   font-family:'JetBrains Mono', monospace;
 
-  cursor:pointer;
+  font-size:14px;
 
-  padding:0;
+  cursor:pointer;
 
   transition:0.2s ease;
 }
 
-.theme-switch:hover{
+button:hover{
 
   color:var(--text);
+
+  border-color:var(--accent);
 }
 
 /* MOBILE NAVBAR */
