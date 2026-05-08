@@ -35,12 +35,12 @@
         Z → A
       </button>
 
-      <button class="theme-btn" onclick="sortYear()">
-        Year
+      <button class="theme-btn" onclick="sortYearAsc()">
+        Year ↑
       </button>
 
-      <button class="theme-btn" onclick="sortCode()">
-        Code
+      <button class="theme-btn" onclick="sortYearDesc()">
+        Year ↓
       </button>
 
     </div>
@@ -55,64 +55,218 @@
 
     <ul class="anime-list">
 
-      <li data-year="2016" data-code="JA">
-        Your Name (2016) • JA
+      <li data-year="2016">Your Name (2016)</li>
+
+      <li data-year="1992">
+        Ramayana: The Legend of Prince Rama (1992)
       </li>
 
-      <li data-year="1997" data-code="JA">
-        Princess Mononoke (1997) • JA
+      <li data-year="1997">
+        Princess Mononoke (1997)
       </li>
 
-      <li data-year="2022" data-code="JA">
-        Suzume No Tojimari (2022) • JA
+      <li data-year="2022">
+        Suzume No Tojimari (2022)
       </li>
 
-      <li data-year="1988" data-code="JA">
-        Grave of the Fireflies (1988) • JA
+      <li data-year="1988">
+        Grave of the Fireflies (1988)
       </li>
 
-      <li data-year="2024" data-code="JA">
-        Look Back (2024) • JA
+      <li data-year="1997">
+        Perfect Blue (1997)
       </li>
 
-      <li data-year="2021" data-code="JA">
-        Ranking of Kings (2021) S1-2 • JA
+      <li data-year="2023">
+        Lupin the 3rd vs Cat's Eye (2023)
       </li>
 
-      <li data-year="2023" data-code="JA">
-        Mashle: Magic & Muscles (2023) S1-2 • JA
+      <li data-year="2001">
+        Spirited Away (2001)
       </li>
 
-      <li data-year="2006" data-code="JA">
-        Death Note (2006) S1 • JA
+      <li data-year="2004">
+        Howl's Moving Castle (2004)
       </li>
 
-      <li data-year="2019" data-code="JA">
-        Vinland Saga (2019) S1-2 • JA
+      <li data-year="1989">
+        Kiki's Delivery Service (1989)
       </li>
 
-      <li data-year="2022" data-code="JA">
-        Spy x Family (2022) S1-3 • JA
+      <li data-year="1988">
+        My Neighbour Totoro (1988)
       </li>
 
-      <li data-year="1999" data-code="JA">
-        One Piece (1999) S1-21 • JA
+      <li data-year="2008">
+        Ponyo (2008)
       </li>
 
-      <li data-year="2013" data-code="JA">
-        Attack on Titan (2013) S1-4 • JA
+      <li data-year="2013">
+        The Tale of Princess Kaguya (2013)
       </li>
 
-      <li data-year="2023" data-code="JA">
-        The Apothecary Diaries (2023) S1-2 • JA
+      <li data-year="2013">
+        The Garden of Words (2013)
       </li>
 
-      <li data-year="2006" data-code="JA">
-        Welcome to the NHK (2006) S1 • JA
+      <li data-year="1986">
+        Castle in the Sky (1986)
       </li>
 
-      <li data-year="2024" data-code="JA">
-        Solo Leveling (2024) JA S1-2
+      <li data-year="2013">
+        Berserk: Golden Age Arc III - The Advent (2013)
+      </li>
+
+      <li data-year="2022">
+        Drifting Home (2022)
+      </li>
+
+      <li data-year="2019">
+        Weathering With You (2019)
+      </li>
+
+      <li data-year="1995">
+        Whisper of the Heart (1995)
+      </li>
+
+      <li data-year="2021">
+        Summer Ghost (2021)
+      </li>
+
+      <li data-year="2024">
+        Look Back (2024)
+      </li>
+
+      <li data-year="2023">
+        Spy × Family Code: White (2023)
+      </li>
+
+      <li data-year="1988">
+        Akira (1988)
+      </li>
+
+      <li data-year="1997">
+        Neon Genesis Evangelion: The End of Evangelion (1997)
+      </li>
+
+      <li data-year="2025">
+        Demon Slayer: Infinity Castle (2025)
+      </li>
+
+      <li data-year="2025">
+        Chainsaw Man – The Movie: Reze Arc (2025)
+      </li>
+
+      <li data-year="2021">
+        Ranking of Kings (2021) S1-2
+      </li>
+
+      <li data-year="2023">
+        Mashle: Magic & Muscles (2023) S1-2
+      </li>
+
+      <li data-year="2018">
+        Darling in the Franxx (2018) S1
+      </li>
+
+      <li data-year="2002">
+        Naruto (2002) S1-9
+      </li>
+
+      <li data-year="2007">
+        Naruto Shippuden (2007) S1-21
+      </li>
+
+      <li data-year="2006">
+        Death Note (2006) S1
+      </li>
+
+      <li data-year="2021">
+        Tokyo Revengers (2021) S1-3
+      </li>
+
+      <li data-year="2000">
+        Hajime No Ippo (2000) S1
+      </li>
+
+      <li data-year="2022">
+        Chainsaw Man (2022) S1
+      </li>
+
+      <li data-year="2019">
+        Vinland Saga (2019) S1-2
+      </li>
+
+      <li data-year="2022">
+        Spy x Family (2022) S1-3
+      </li>
+
+      <li data-year="2007">
+        Afro Samurai (2007) S1
+      </li>
+
+      <li data-year="1997">
+        Berserk (1997) S1
+      </li>
+
+      <li data-year="2024">
+        Ninja Kamui (2024) S1
+      </li>
+
+      <li data-year="2020">
+        Jujutsu Kaisen (2020) S1
+      </li>
+
+      <li data-year="2020">
+        Rent-a-Girlfriend (2020) S1-3
+      </li>
+
+      <li data-year="2023">
+        Hell's Paradise (2023) S1-2
+      </li>
+
+      <li data-year="2014">
+        Parasyte: The Maxim (2014) S1
+      </li>
+
+      <li data-year="2024">
+        Wind Breaker (2024) S1
+      </li>
+
+      <li data-year="2004">
+        Samurai Champloo (2004) S1
+      </li>
+
+      <li data-year="1999">
+        One Piece (1999) S1-21
+      </li>
+
+      <li data-year="2013">
+        Attack on Titan (2013) S1-4
+      </li>
+
+      <li data-year="2023">
+        The Apothecary Diaries (2023) S1-2
+      </li>
+
+      <li data-year="2016">
+        Re:Zero - Starting Life in Another World (2016) S1-3
+      </li>
+
+      <li data-year="2006">
+        Welcome to the NHK (2006) S1
+      </li>
+
+      <li data-year="2019">
+        Dr. Stone (2019) S1-4P2
+      </li>
+
+      <li data-year="2024">
+        Solo Leveling (2024) S1-2
+      </li>
+
+      <li data-year="2020">
+        Tower of God (2020) S1-2
       </li>
 
     </ul>
@@ -127,16 +281,16 @@
 
     <ul class="anime-list">
 
-      <li data-year="2020" data-code="CD">
-        The Daily Life of the Immortal King (2020) S1-5 • CD
+      <li data-year="2020">
+        The Daily Life of the Immortal King (2020) S1-5
       </li>
 
-      <li data-year="2025" data-code="CD">
-        Super Cube (2025) S1 • CD
+      <li data-year="2025">
+        Super Cube (2025) S1
       </li>
 
-      <li data-year="2020" data-code="CD">
-        Fog Hill of Five Elements (2020) S1-2 • CD
+      <li data-year="2020">
+        Fog Hill of Five Elements (2020) S1-2
       </li>
 
     </ul>
@@ -151,8 +305,28 @@
 
     <ul class="anime-list">
 
-      <li data-year="2022" data-code="KHA">
-        Lookism (2022) S1 • KHA
+      <li data-year="2022">
+        Lookism (2022) S1
+      </li>
+
+    </ul>
+
+  </details>
+
+  <!-- AMERICAN -->
+
+  <details class="card">
+
+    <summary>American Animation • AA</summary>
+
+    <ul class="anime-list">
+
+      <li data-year="2022">
+        Lightyear (2022)
+      </li>
+
+      <li data-year="2022">
+        Turning Red (2022)
       </li>
 
     </ul>
@@ -161,26 +335,6 @@
 
 </div>
 
-  <!-- AMERICAN -->
-
-<details class="card">
-
-  <summary>American Animation • AA</summary>
-
-  <ul class="anime-list">
-
-    <li data-year="2022" data-code="AA">
-      Lightyear (2022) • AA
-    </li>
-
-    <li data-year="2022" data-code="AA">
-      Turning Red (2022) • AA
-    </li>
-
-  </ul>
-
-</details>
-  
 <script>
 
 /* THEME */
@@ -217,9 +371,9 @@ function switchTheme(){
 
 }
 
-/* SORTING */
+/* GET LISTS */
 
-function getAllLists(){
+function getLists(){
 
   return document.querySelectorAll(".anime-list");
 
@@ -229,7 +383,7 @@ function getAllLists(){
 
 function sortAZ(){
 
-  getAllLists().forEach(list => {
+  getLists().forEach(list => {
 
     const items = Array.from(list.children);
 
@@ -251,7 +405,7 @@ function sortAZ(){
 
 function sortZA(){
 
-  getAllLists().forEach(list => {
+  getLists().forEach(list => {
 
     const items = Array.from(list.children);
 
@@ -269,16 +423,16 @@ function sortZA(){
 
 }
 
-/* YEAR */
+/* YEAR ASC */
 
-function sortYear(){
+function sortYearAsc(){
 
-  getAllLists().forEach(list => {
+  getLists().forEach(list => {
 
     const items = Array.from(list.children);
 
     items.sort((a,b)=>
-      b.dataset.year - a.dataset.year
+      a.dataset.year - b.dataset.year
     );
 
     list.innerHTML = "";
@@ -291,16 +445,16 @@ function sortYear(){
 
 }
 
-/* CODE */
+/* YEAR DESC */
 
-function sortCode(){
+function sortYearDesc(){
 
-  getAllLists().forEach(list => {
+  getLists().forEach(list => {
 
     const items = Array.from(list.children);
 
     items.sort((a,b)=>
-      a.dataset.code.localeCompare(b.dataset.code)
+      b.dataset.year - a.dataset.year
     );
 
     list.innerHTML = "";
