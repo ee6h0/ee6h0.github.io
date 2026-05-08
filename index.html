@@ -178,6 +178,46 @@ theme
     </div>
 
   </div>
+<script>
 
+let theme = 0;
+
+function switchTheme(){
+
+  theme++;
+
+  if(theme % 3 === 0){
+
+    document.body.style.background =
+    "#050505";
+
+    document.body.style.color =
+    "#d1d1d1";
+
+  }
+
+  else if(theme % 3 === 1){
+
+    document.body.style.background =
+    "#0d0b08";
+
+    document.body.style.color =
+    "#f3e7c1";
+
+  }
+
+  else{
+
+    document.body.style.background =
+    "#08110c";
+
+    document.body.style.color =
+    "#cfe8cf";
+
+  }
+
+}
+
+</script>
 </body>
 </html>
