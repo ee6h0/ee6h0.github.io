@@ -337,3 +337,7 @@ li{
 .lock-box input::placeholder{
   text-align:center;
 }
+
+#username{
+  margin-bottom:12px;
+}
