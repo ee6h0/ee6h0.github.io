@@ -1,152 +1,26 @@
-/* ALL THEMES */
+/* ── THEMES ── */
+const THEMES = ['', 'sunset', 'forest', 'ice', 'crimson', 'gold', 'matrix'];
+let ti = Math.max(0, THEMES.indexOf(localStorage.getItem('theme') || ''));
 
-const themes = [
+if (THEMES[ti]) document.body.classList.add(THEMES[ti]);
 
-  "",
-  "sunset",
-  "forest",
-  "ice",
-  "crimson",
-  "gold",
-  "midnight",
-  "ocean",
-  "rose",
-  "matrix"
-
-];
-
-/* LOAD SAVED THEME */
-
-const savedTheme =
-localStorage.getItem("theme");
-
-if(savedTheme){
-
-  document.body.classList.add(savedTheme);
+function nextTheme() {
+  document.body.classList.remove(...THEMES.filter(Boolean));
+  ti = (ti + 1) % THEMES.length;
+  if (THEMES[ti]) document.body.classList.add(THEMES[ti]);
+  localStorage.setItem('theme', THEMES[ti]);
 }
 
-/* CURRENT THEME INDEX */
-
-let theme =
-themes.indexOf(savedTheme);
-
-if(theme < 0){
-
-  theme = 0;
+/* ── SORT GRID ── */
+function sortGrid(gridId, dir) {
+  const g = document.getElementById(gridId);
+  if (!g) return;
+  [...g.children]
+    .sort((a, b) => dir * a.textContent.trim().localeCompare(b.textContent.trim()))
+    .forEach(el => g.appendChild(el));
 }
 
-/* SWITCH THEME */
-
-window.switchTheme = function(){
-
-  theme++;
-
-  if(theme >= themes.length){
-
-    theme = 0;
-  }
-
-  document.body.classList.remove(
-
-    "sunset",
-    "forest",
-    "ice",
-    "crimson",
-    "gold",
-    "midnight",
-    "ocean",
-    "rose",
-    "matrix"
-
-  );
-
-  const current =
-  themes[theme];
-
-  if(current){
-
-    document.body.classList.add(current);
-  }
-
-  localStorage.setItem(
-    "theme",
-    current
-  );
-};
-
-/* DISABLE IMAGE MENU */
-
-document.addEventListener(
-  "contextmenu",
-  e => {
-
-    if(
-      e.target.tagName === "IMG"
-    ){
-
-      e.preventDefault();
-    }
-  }
-);
-
-/* SORT A-Z */
-
-window.sortAZ = function(){
-
-  const grid =
-  document.getElementById(
-    "creatorsGrid"
-  );
-
-  if(!grid) return;
-
-  const items =
-  Array.from(
-    grid.getElementsByClassName(
-      "creator"
-    )
-  );
-
-  items.sort((a,b)=>
-    a.innerText.localeCompare(
-      b.innerText
-    )
-  );
-
-  grid.innerHTML = "";
-
-  items.forEach(item =>
-    grid.appendChild(item)
-  );
-};
-
-/* SORT Z-A */
-
-window.sortZA = function(){
-
-  const grid =
-  document.getElementById(
-    "creatorsGrid"
-  );
-
-  if(!grid) return;
-
-  const items =
-  Array.from(
-    grid.getElementsByClassName(
-      "creator"
-    )
-  );
-
-  items.sort((a,b)=>
-    b.innerText.localeCompare(
-      a.innerText
-    )
-  );
-
-  grid.innerHTML = "";
-
-  items.forEach(item =>
-    grid.appendChild(item)
-  );
-};
+/* ── BLOCK IMG RIGHT-CLICK ── */
+document.addEventListener('contextmenu', e => {
+  if (e.target.tagName === 'IMG') e.preventDefault();
+});
