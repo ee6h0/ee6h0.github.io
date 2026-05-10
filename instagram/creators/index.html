@@ -1,140 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
-
-<title>Creators</title>
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link
-href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="../../style.css">
-
-<link rel="stylesheet"
-href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creators — ee6h0</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
-
 <body>
-
-<div class="grid-bg"></div>
-
 <div class="page">
 
-<h1>Creators</h1>
+  <nav>
+    <a href="/">~/</a>
+    <a href="/instagram/creators/" class="active">creators</a>
+    <div class="spacer"></div>
+    <div class="theme-dot" onclick="nextTheme()" title="Switch theme"></div>
+  </nav>
 
-<div class="line"></div>
+  <div class="page-header">
+    <a href="/" class="btn">← back</a>
+    <h1>creators</h1>
+    <button class="btn" onclick="sortGrid('grid', 1)">A→Z</button>
+    <button class="btn" onclick="sortGrid('grid', -1)">Z→A</button>
+  </div>
 
-<div class="sort-buttons">
-
-  <button onclick="switchTheme()">
-    Theme
-  </button>
-
-  <button onclick="sortAZ()">
-    A → Z
-  </button>
-
-  <button onclick="sortZA()">
-    Z → A
-  </button>
-
-</div>
-
-<div class="line"></div>
-<div
-class="creators-grid"
-id="creatorsGrid">
-
-<a
-class="creator"
-href="https://www.instagram.com/dalitkrantikari/"
-target="_blank">
-
-dalitkrantikari
-
-</a>
-
-<a
-class="creator"
-href="https://www.instagram.com/b2und_/"
-target="_blank">
-
-b2und_
-
-</a>
-
-<a
-class="creator"
-href="https://www.instagram.com/deltaforce.ftw/"
-target="_blank">
-
-deltaforce.ftw
-
-</a>
-
-<a
-class="creator"
-href="https://www.instagram.com/joroedits/"
-target="_blank">
-
-joroedits
-
-</a>
-
-<a
-class="creator"
-href="https://www.instagra
-  m.com/kalludaket/"
-target="_blank">
-
-kalludaket
-
-</a>
-
-<a
-class="creator"
-href="https://www.instagram.com/verdict.is.here/">
-
-verdict.is.here
-
-</a>
-
-<a
-class="creator"
-href="#">
-
-unknown02
-
-</a>
-
-<a
-class="creator"
-href="#">
-
-unknown03
-
-</a>
+  <div class="grid" id="grid">
+    <a class="grid-item" href="https://www.instagram.com/dalitkrantikari/" target="_blank">dalitkrantikari</a>
+    <a class="grid-item" href="https://www.instagram.com/b2und_/" target="_blank">b2und_</a>
+    <a class="grid-item" href="https://www.instagram.com/deltaforce.ftw/" target="_blank">deltaforce.ftw</a>
+    <a class="grid-item" href="https://www.instagram.com/joroedits/" target="_blank">joroedits</a>
+    <a class="grid-item" href="https://www.instagram.com/kalludaket/" target="_blank">kalludaket</a>
+    <a class="grid-item" href="https://www.instagram.com/verdict.is.here/" target="_blank">verdict.is.here</a>
+    <a class="grid-item" href="#">unknown02</a>
+    <a class="grid-item" href="#">unknown03</a>
+  </div>
 
 </div>
-
-</div>
-
-<script src="../../script.js"></script>
-
+<script src="/script.js"></script>
 </body>
 </html>
