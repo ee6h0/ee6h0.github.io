@@ -17,24 +17,33 @@
     }
 
     body {
-      background: white;
-      color: black;
-      font-family: 'Poppins', sans-serif;
-      height: 100vh;
+      background: #fff;
+      color: #000;
+      font-family: "Poppins", sans-serif;
+
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+
       text-align: center;
+      padding: 20px;
     }
 
     .container {
-      line-height: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 64px;
       font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
     }
 
     a {
@@ -46,12 +55,19 @@
       text-decoration: underline;
     }
 
-    p {
-      font-size: 1.1rem;
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
     <h1>ee6h0</h1>
 
@@ -83,5 +99,6 @@
       </a>
     </p>
   </div>
+
 </body>
 </html>
