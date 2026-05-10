@@ -1,97 +1,101 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ee6h0</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-  <style>
-    /* CSS Variables for easy color management */
-    :root {
-      --bg-color: #f4f4f9;
-      --text-color: #333333;
-      --card-bg: #ffffff;
-      --border-color: #e0e0e0;
-      --hover-bg: #0056b3;
-      --hover-text: #ffffff;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ee6h0</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <style>
+        :root {
+            --bg: #f8f9fa;
+            --text: #212529;
+            --btn-bg: #ffffff;
+            --border: #dee2e6;
+            --accent: #007bff;
+        }
 
-    /* Automatic Dark Mode */
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg-color: #121212;
-        --text-color: #eaeaea;
-        --card-bg: #1e1e1e;
-        --border-color: #333333;
-        --hover-bg: #4da3ff;
-        --hover-text: #121212;
-      }
-    }
+        /* This class will be toggled by JavaScript */
+        .dark-mode {
+            --bg: #121212;
+            --text: #f8f9fa;
+            --btn-bg: #1e1e1e;
+            --border: #333333;
+            --accent: #4da3ff;
+        }
 
-    body {
-      margin: 0;
-      display: grid;
-      place-items: center;
-      min-height: 100vh;
-      font-family: 'Poppins', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      text-align: center;
-      transition: background-color 0.3s, color 0.3s;
-    }
+        body {
+            margin: 0;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: 0.3s;
+        }
 
-    /* Container to keep buttons a consistent width */
-    .link-container {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      width: 100%;
-      max-width: 320px;
-      padding: 20px;
-    }
+        .container {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            padding: 20px;
+        }
 
-    h1 {
-      margin: 0 0 15px 0;
-      font-weight: 600;
-      font-size: 24px;
-      letter-spacing: 1px;
-    }
+        h1 { margin-bottom: 20px; font-weight: 600; }
 
-    /* Styling the links as buttons */
-    a {
-      display: block;
-      padding: 14px 20px;
-      text-decoration: none;
-      color: var(--text-color);
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 8px; /* Rounded corners */
-      font-weight: 400;
-      font-size: 14px;
-      transition: all 0.2s ease-in-out;
-    }
+        a {
+            display: block;
+            margin-bottom: 12px;
+            padding: 15px;
+            text-decoration: none;
+            color: var(--text);
+            background: var(--btn-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: 0.2s;
+            font-size: 14px;
+        }
 
-    /* Hover and Focus Effects */
-    a:hover, a:focus {
-      background-color: var(--hover-bg);
-      color: var(--hover-text);
-      border-color: var(--hover-bg);
-      transform: translateY(-2px); /* Slight lift effect */
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      outline: none;
-    }
-  </style>
+        a:hover {
+            border-color: var(--accent);
+            transform: scale(1.02);
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Toggle Button Style */
+        #theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--btn-bg);
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 8px 12px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="link-container">
-    <h1>ee6h0</h1>
-    <!-- target="_blank" opens links in a new tab -->
-    <a href="https://instagram.com/ee6h0/" target="_blank" rel="noopener noreferrer">Instagram</a>
-    <a href="https://github.com/ee6h0/" target="_blank" rel="noopener noreferrer">GitHub</a>
-    <a href="https://t.me/ee6h0/" target="_blank" rel="noopener noreferrer">Telegram</a>
-    <a href="mailto:xexcn@proton.me">Mail</a>
-  </div>
+    <button id="theme-toggle">Toggle Mode</button>
+
+    <div class="container">
+        <h1>ee6h0</h1>
+        <a href="https://instagram.com/ee6h0/" target="_blank">Instagram</a>
+        <a href="https://github.com/ee6h0/" target="_blank">GitHub</a>
+        <a href="https://t.me/ee6h0/" target="_blank">Telegram</a>
+        <a href="mailto:xexcn@proton.me">Mail</a>
+    </div>
+
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        btn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 
 </body>
 </html>
